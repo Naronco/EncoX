@@ -2,7 +2,7 @@
 #include "DesktopView.h"
 
 namespace enco {
-	void DesktopView::create() {
+	ENCODESKTOPAPI void DesktopView::create() {
 		SDL_Init(SDL_INIT_EVERYTHING);
 
 		m_window = SDL_CreateWindow("EncoX", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, (int)m_size.x, (int)m_size.y, SDL_WINDOW_SHOWN);
@@ -12,14 +12,14 @@ namespace enco {
 		}
 	}
 
-	void DesktopView::destroy() {
+	ENCODESKTOPAPI void DesktopView::destroy() {
 		if (m_window) {
 			SDL_DestroyWindow(m_window);
 			m_window = nullptr;
 		}
 	}
 
-	void DesktopView::update(float deltaTime) {
+	ENCODESKTOPAPI void DesktopView::update(float deltaTime) {
 		SDL_Event event;
 		while (SDL_PollEvent(&event)) {
 			switch (event.type) {

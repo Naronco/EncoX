@@ -31,3 +31,6 @@ TODO.txt
 Cubeshaft/
 */Debug/
 SuperHot/
+ipch/
+Debug/
+Release/
