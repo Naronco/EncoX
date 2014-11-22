@@ -41,9 +41,14 @@ namespace enco {
 			}
 		}
 
-		SDL_GL_SwapWindow(m_window);
-
 		return true;
+	}
+
+	ENCODESKTOPAPI void DesktopView::beginScene() {
+	}
+
+	ENCODESKTOPAPI void DesktopView::endScene() {
+		SDL_GL_SwapWindow(m_window);
 	}
 
 	ENCODESKTOPAPI void DesktopView::createOpenGLContext(const OpenGLContextParameters &parameters) {

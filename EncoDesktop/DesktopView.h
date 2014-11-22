@@ -18,6 +18,9 @@ namespace enco {
 
 		ENCODESKTOPAPI virtual bool update(float deltaTime);
 
+		ENCODESKTOPAPI virtual void beginScene();
+		ENCODESKTOPAPI virtual void endScene();
+
 		ENCODESKTOPAPI virtual void createOpenGLContext(const OpenGLContextParameters &parameters);
 
 		inline virtual std::shared_ptr<IOpenGLContext> getOpenGLContext() const { return m_openGLContext; }
