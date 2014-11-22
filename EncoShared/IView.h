@@ -21,7 +21,7 @@ namespace enco {
 
 		inline OpenGLContextParameters() {
 			redSize = greenSize = blueSize = alphaSize = 8;
-			doublebufferSize = 2;
+			doublebufferSize = 1;
 			depthbufferSize = 16;
 			stencilbufferSize = 0;
 			samples = 0;
