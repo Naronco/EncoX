@@ -35,32 +35,32 @@ namespace enco {
 
 	template <typename T>
 	inline Color3<T> operator + (const Color3<T> &v0, const Color3<T> &v1) {
-		return Color3<T>(v0.r + v1.r, v0.y + v1.y, v0.z + v1.z);
+		return Color3<T>(v0.r + v1.r, v0.g + v1.g, v0.b + v1.b);
 	}
 
 	template <typename T>
 	inline Color3<T> operator - (const Color3<T> &v0, const Color3<T> &v1) {
-		return Color3<T>(v0.r - v1.r, v0.y - v1.y, v0.z - v1.z);
+		return Color3<T>(v0.r - v1.r, v0.g - v1.g, v0.b - v1.b);
 	}
 
 	template <typename T>
 	inline Color3<T> operator * (const Color3<T> &v0, const Color3<T> &v1) {
-		return Color3<T>(v0.r * v1.r, v0.y * v1.y, v0.z * v1.z);
+		return Color3<T>(v0.r * v1.r, v0.g * v1.g, v0.b * v1.b);
 	}
 
 	template <typename T>
 	inline Color3<T> operator / (const Color3<T> &v0, const Color3<T> &v1) {
-		return Color3<T>(v0.r / v1.r, v0.y / v1.y, v0.z / v1.z);
+		return Color3<T>(v0.r / v1.r, v0.g / v1.g, v0.b / v1.b);
 	}
 
 	template <typename T>
 	inline Color3<T> &operator += (Color3<T> &v0, const Color3<T> &v1) {
-		return v0 = Color3<T>(v0.r + v1.r, v0.y + v1.y, v0.z + v1.z);
+		return v0 = Color3<T>(v0.r + v1.r, v0.g + v1.g, v0.b + v1.b);
 	}
 
 	template <typename T>
 	inline Color3<T> &operator -= (Color3<T> &v0, const Color3<T> &v1) {
-		return v0 = Color3<T>(v0.r - v1.r, v0.y - v1.y, v0.z - v1.z);
+		return v0 = Color3<T>(v0.r - v1.r, v0.g - v1.g, v0.b - v1.b);
 	}
 
 	template <typename T>
