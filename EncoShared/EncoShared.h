@@ -7,3 +7,4 @@
 #include "Color3.h"
 
 #include "IView.h"
+#include "IRenderer.h"
