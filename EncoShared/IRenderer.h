@@ -21,7 +21,7 @@ namespace enco {
 		virtual void setClearColor(const Color3f &clearColor) = 0;
 		virtual void setClearDepth(float64 clearDepth) = 0;
 
-		virtual void clearBuffer(RenderingBuffer buffers) = 0;
+		virtual void clearBuffer(int buffers) = 0;
 	};
 }
 
