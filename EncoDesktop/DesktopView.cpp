@@ -29,4 +29,8 @@ namespace enco {
 			}
 		}
 	}
+
+	ENCODESKTOPAPI void DesktopView::createOpenGLContext(const OpenGLContextParameters &parameters) {
+		// TODO: Create Desktop OpenGLContext
+	}
 }
