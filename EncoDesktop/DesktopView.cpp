@@ -32,17 +32,18 @@ namespace enco {
 		SDL_Quit();
 	}
 
-	ENCODESKTOPAPI void DesktopView::update(float deltaTime) {
+	ENCODESKTOPAPI bool DesktopView::update(float deltaTime) {
 		SDL_Event event;
 		while (SDL_PollEvent(&event)) {
 			switch (event.type) {
 			case SDL_QUIT:
-				exit(0); // TODO: Better quit
-				break;
+				return false;
 			}
 		}
 
 		SDL_GL_SwapWindow(m_window);
+
+		return true;
 	}
 
 	ENCODESKTOPAPI void DesktopView::createOpenGLContext(const OpenGLContextParameters &parameters) {

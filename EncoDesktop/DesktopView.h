@@ -16,7 +16,7 @@ namespace enco {
 		ENCODESKTOPAPI virtual void create();
 		ENCODESKTOPAPI virtual void destroy();
 
-		ENCODESKTOPAPI virtual void update(float deltaTime);
+		ENCODESKTOPAPI virtual bool update(float deltaTime);
 
 		ENCODESKTOPAPI virtual void createOpenGLContext(const OpenGLContextParameters &parameters);
 

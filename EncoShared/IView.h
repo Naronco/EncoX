@@ -41,7 +41,7 @@ namespace enco {
 		virtual void create() = 0;
 		virtual void destroy() = 0;
 
-		virtual void update(float deltaTime) = 0;
+		virtual bool update(float deltaTime) = 0;
 
 		virtual void createOpenGLContext(const OpenGLContextParameters &parameters) = 0;
 		virtual std::shared_ptr<IOpenGLContext> getOpenGLContext() const = 0;
