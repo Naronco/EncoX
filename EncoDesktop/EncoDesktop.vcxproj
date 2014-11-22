@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>..\framework\include;..;$(IncludePath)</IncludePath>
-    <LibraryPath>..\framework\lib\SDL2\x86;..\Debug;$(LibraryPath)</LibraryPath>
+    <LibraryPath>..\framework\lib\SDL2\x86;..\framework\lib\glew\x86;..\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
