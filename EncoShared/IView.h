@@ -6,7 +6,38 @@
 #include "stdafx.h"
 #include "Vector2.h"
 
+#include <memory>
+
 namespace enco {
+	class IView;
+	class IOpenGLContext;
+	struct OpenGLContextParameters;
+	
+	struct OpenGLContextParameters {
+		uint8 redSize, greenSize, blueSize, alphaSize;
+		uint8 doublebufferSize, depthbufferSize, stencilbufferSize;
+		uint8 samples;
+		uint8 majorVersion, minorVersion;
+
+		inline OpenGLContextParameters() {
+			redSize = greenSize = blueSize = alphaSize = 8;
+			doublebufferSize = 2;
+			depthbufferSize = 16;
+			stencilbufferSize = 0;
+			samples = 0;
+			majorVersion = 3;
+			minorVersion = 2;
+		}
+	};
+
+	class IOpenGLContext {
+	public:
+		IOpenGLContext() {  }
+		virtual ~IOpenGLContext() {  }
+
+		virtual void makeCurrent() = 0;
+	};
+
 	class IView {
 	protected:
 		Vector2ui m_size;
@@ -19,6 +50,9 @@ namespace enco {
 		virtual void destroy() = 0;
 
 		virtual void update(float deltaTime) = 0;
+
+		virtual void createOpenGLContext(const OpenGLContextParameters &parameters) = 0;
+		virtual std::shared_ptr<IOpenGLContext> getOpenGLContext() const = 0;
 
 		inline void setSize(const Vector2ui &size) { m_size = size; }
 		inline Vector2ui getSize() const { return m_size; }
