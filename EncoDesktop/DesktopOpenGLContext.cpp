@@ -19,9 +19,17 @@ namespace enco {
 
 		m_sdlGLContext = SDL_GL_CreateContext(window);
 		if (!m_sdlGLContext) {
-			// TODO: Error handling
+#ifdef _DEBUG
+			const char *error = SDL_GetError();
+			if (*error != '\0') {
+				printf("SDL Error: %s\n", error);
+				SDL_ClearError();
+			}
+#endif
 			return;
 		}
+
+		SDL_GL_SetSwapInterval(1);
 	}
 
 	ENCODESKTOPAPI DesktopOpenGLContext::~DesktopOpenGLContext() {
