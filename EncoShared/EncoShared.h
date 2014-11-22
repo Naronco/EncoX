@@ -13,4 +13,6 @@
 #include "IOpenGLContext.h"
 #include "IRenderer.h"
 
+#include "EncoContext.h"
+
 #endif
