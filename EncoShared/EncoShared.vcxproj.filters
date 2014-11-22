@@ -39,6 +39,9 @@
     <ClInclude Include="Color3.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="IOpenGLContext.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

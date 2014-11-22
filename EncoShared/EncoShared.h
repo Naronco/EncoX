@@ -10,6 +10,7 @@
 #include "Color3.h"
 
 #include "IView.h"
+#include "IOpenGLContext.h"
 #include "IRenderer.h"
 
 #endif

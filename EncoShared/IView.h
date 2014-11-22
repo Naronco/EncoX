@@ -5,12 +5,12 @@
 
 #include "stdafx.h"
 #include "Vector2.h"
+#include "IOpenGLContext.h"
 
 #include <memory>
 
 namespace enco {
 	class IView;
-	class IOpenGLContext;
 	struct OpenGLContextParameters;
 	
 	struct OpenGLContextParameters {
@@ -28,14 +28,6 @@ namespace enco {
 			majorVersion = 3;
 			minorVersion = 2;
 		}
-	};
-
-	class IOpenGLContext {
-	public:
-		IOpenGLContext() {  }
-		virtual ~IOpenGLContext() {  }
-
-		virtual void makeCurrent() = 0;
 	};
 
 	class IView {
