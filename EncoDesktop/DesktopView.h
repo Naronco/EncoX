@@ -11,8 +11,8 @@
 namespace enco {
 	class DesktopView : public IView {
 	public:
-		inline DesktopView(const glm::u32vec2 &size = glm::u32vec2(320, 240)) : m_window(nullptr), m_openGLContext(nullptr) { m_size = size; }
-		inline DesktopView(u32 width, u32 height) : DesktopView(glm::u32vec2(width, height)) {  }
+		inline DesktopView(const std::string &title, const glm::u32vec2 &size = glm::u32vec2(320, 240)) : m_window(nullptr), m_openGLContext(nullptr) { m_name = title; m_size = size; }
+		inline DesktopView(const std::string &title, u32 width, u32 height) : DesktopView(title, glm::u32vec2(width, height)) {  }
 
 		ENCODESKTOPAPI virtual void create();
 		ENCODESKTOPAPI virtual void destroy();
@@ -25,6 +25,9 @@ namespace enco {
 		ENCODESKTOPAPI virtual void createOpenGLContext(const OpenGLContextParameters &parameters);
 
 		inline virtual std::shared_ptr<IOpenGLContext> getOpenGLContext() const { return m_openGLContext; }
+
+		ENCODESKTOPAPI virtual void onResize();
+		ENCODESKTOPAPI virtual void onRename();
 
 	private:
 		SDL_Window *m_window;

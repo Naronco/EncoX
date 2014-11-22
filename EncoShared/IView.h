@@ -7,6 +7,7 @@
 #include "IOpenGLContext.h"
 
 #include <memory>
+#include <string>
 
 namespace enco {
 	class IView;
@@ -32,6 +33,10 @@ namespace enco {
 	class IView {
 	protected:
 		glm::u32vec2 m_size;
+		std::string m_name;
+
+		virtual void onResize() {  }
+		virtual void onRename() {  }
 
 	public:
 		IView() {  }
@@ -48,8 +53,11 @@ namespace enco {
 		virtual void createOpenGLContext(const OpenGLContextParameters &parameters) = 0;
 		virtual std::shared_ptr<IOpenGLContext> getOpenGLContext() const = 0;
 
-		inline void setSize(const glm::u32vec2 &size) { m_size = size; }
+		inline void setSize(const glm::u32vec2 &size) { m_size = size; onResize(); }
+		inline void setName(const std::string &name) { m_name = name; onRename(); }
+
 		inline glm::u32vec2 getSize() const { return m_size; }
+		inline std::string getName() const { return m_name; }
 	};
 }
 
