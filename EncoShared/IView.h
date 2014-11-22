@@ -12,7 +12,7 @@
 namespace enco {
 	class IView;
 	struct OpenGLContextParameters;
-	
+
 	struct OpenGLContextParameters {
 		uint8 redSize, greenSize, blueSize, alphaSize;
 		uint8 doublebufferSize, depthbufferSize, stencilbufferSize;
@@ -37,7 +37,7 @@ namespace enco {
 	public:
 		IView() {  }
 		virtual ~IView() {  }
-		
+
 		virtual void create() = 0;
 		virtual void destroy() = 0;
 
