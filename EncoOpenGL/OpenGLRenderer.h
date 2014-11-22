@@ -10,8 +10,8 @@
 namespace enco {
 	class OpenGLRenderer : public IRenderer {
 	public:
-		ENCOOPENGLAPI virtual void setClearColor(const Color3f &clearColor);
-		ENCOOPENGLAPI virtual void setClearDepth(float64 clearDepth);
+		ENCOOPENGLAPI virtual void setClearColor(f32 r, f32 g, f32 b);
+		ENCOOPENGLAPI virtual void setClearDepth(f64 clearDepth);
 
 		ENCOOPENGLAPI virtual void clearBuffer(int buffers);
 	};

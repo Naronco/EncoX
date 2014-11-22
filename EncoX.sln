@@ -3,13 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EncoX", "EncoX\EncoX.vcxproj", "{E840BD33-0C61-481C-9AB3-69ABCBB3B24D}"
-	ProjectSection(ProjectDependencies) = postProject
-		{F2DC4982-0E00-46AF-8192-6C92233FE666} = {F2DC4982-0E00-46AF-8192-6C92233FE666}
-		{5502B5B1-C5BE-4121-B8F1-27186FDB58B5} = {5502B5B1-C5BE-4121-B8F1-27186FDB58B5}
-		{009087F8-D092-45B2-9411-CA69C234C6D8} = {009087F8-D092-45B2-9411-CA69C234C6D8}
-	EndProjectSection
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EncoShared", "EncoShared\EncoShared.vcxproj", "{5502B5B1-C5BE-4121-B8F1-27186FDB58B5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EncoDesktop", "EncoDesktop\EncoDesktop.vcxproj", "{F2DC4982-0E00-46AF-8192-6C92233FE666}"
@@ -24,16 +17,19 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EncoOpenGL", "EncoOpenGL\En
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Demo", "Demo\Demo.vcxproj", "{B066EF83-E570-4F29-A7CA-0BCD01E8A34C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EncoX", "EncoX\EncoX.vcxproj", "{90B32D1F-A876-419D-A290-12C28DBA2E27}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F2DC4982-0E00-46AF-8192-6C92233FE666} = {F2DC4982-0E00-46AF-8192-6C92233FE666}
+		{5502B5B1-C5BE-4121-B8F1-27186FDB58B5} = {5502B5B1-C5BE-4121-B8F1-27186FDB58B5}
+		{009087F8-D092-45B2-9411-CA69C234C6D8} = {009087F8-D092-45B2-9411-CA69C234C6D8}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E840BD33-0C61-481C-9AB3-69ABCBB3B24D}.Debug|Win32.ActiveCfg = Debug|Win32
-		{E840BD33-0C61-481C-9AB3-69ABCBB3B24D}.Debug|Win32.Build.0 = Debug|Win32
-		{E840BD33-0C61-481C-9AB3-69ABCBB3B24D}.Release|Win32.ActiveCfg = Release|Win32
-		{E840BD33-0C61-481C-9AB3-69ABCBB3B24D}.Release|Win32.Build.0 = Release|Win32
 		{5502B5B1-C5BE-4121-B8F1-27186FDB58B5}.Debug|Win32.ActiveCfg = Debug|Win32
 		{5502B5B1-C5BE-4121-B8F1-27186FDB58B5}.Debug|Win32.Build.0 = Debug|Win32
 		{5502B5B1-C5BE-4121-B8F1-27186FDB58B5}.Release|Win32.ActiveCfg = Release|Win32
@@ -50,6 +46,10 @@ Global
 		{B066EF83-E570-4F29-A7CA-0BCD01E8A34C}.Debug|Win32.Build.0 = Debug|Win32
 		{B066EF83-E570-4F29-A7CA-0BCD01E8A34C}.Release|Win32.ActiveCfg = Release|Win32
 		{B066EF83-E570-4F29-A7CA-0BCD01E8A34C}.Release|Win32.Build.0 = Release|Win32
+		{90B32D1F-A876-419D-A290-12C28DBA2E27}.Debug|Win32.ActiveCfg = Debug|Win32
+		{90B32D1F-A876-419D-A290-12C28DBA2E27}.Debug|Win32.Build.0 = Debug|Win32
+		{90B32D1F-A876-419D-A290-12C28DBA2E27}.Release|Win32.ActiveCfg = Release|Win32
+		{90B32D1F-A876-419D-A290-12C28DBA2E27}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

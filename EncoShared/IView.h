@@ -4,7 +4,6 @@
 #pragma once
 
 #include "stdafx.h"
-#include "Vector2.h"
 #include "IOpenGLContext.h"
 
 #include <memory>
@@ -32,7 +31,7 @@ namespace enco {
 
 	class IView {
 	protected:
-		Vector2ui m_size;
+		glm::u32vec2 m_size;
 
 	public:
 		IView() {  }
@@ -49,8 +48,8 @@ namespace enco {
 		virtual void createOpenGLContext(const OpenGLContextParameters &parameters) = 0;
 		virtual std::shared_ptr<IOpenGLContext> getOpenGLContext() const = 0;
 
-		inline void setSize(const Vector2ui &size) { m_size = size; }
-		inline Vector2ui getSize() const { return m_size; }
+		inline void setSize(const glm::u32vec2 &size) { m_size = size; }
+		inline glm::u32vec2 getSize() const { return m_size; }
 	};
 }
 

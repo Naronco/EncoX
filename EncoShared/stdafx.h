@@ -1,18 +1,20 @@
 #pragma once
 
 #ifdef _WIN32
-
 #	include "targetver.h"
 
 #	define WIN32_LEAN_AND_MEAN
 #	include <windows.h>
 
-#	define ENCOSHAREDAPI __declspec(dllexport)
+#	include <glm\glm.hpp>
 
+#	ifdef ENCOSHARED_EXPORTS
+#		define ENCOSHAREDAPI __declspec(dllexport)
+#	else
+#		define ENCOSHAREDAPI __declspec(dllimport)
+#	endif
 #else
-
 #	define ENCOSHAREDAPI
-
 #endif
 
 namespace enco {

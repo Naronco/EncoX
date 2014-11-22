@@ -2,11 +2,11 @@
 #include "OpenGLRenderer.h"
 
 namespace enco {
-	ENCOOPENGLAPI void OpenGLRenderer::setClearColor(const Color3f &clearColor) {
-		glClearColor(clearColor.r, clearColor.g, clearColor.b, 1);
+	ENCOOPENGLAPI void OpenGLRenderer::setClearColor(f32 r, f32 g, f32 b) {
+		glClearColor(r, g, b, 1);
 	}
 
-	ENCOOPENGLAPI void OpenGLRenderer::setClearDepth(float64 clearDepth) {
+	ENCOOPENGLAPI void OpenGLRenderer::setClearDepth(f64 clearDepth) {
 		glClearDepth(clearDepth);
 	}
 

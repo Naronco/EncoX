@@ -4,7 +4,6 @@
 #pragma once
 
 #include "stdafx.h"
-#include "Color3.h"
 
 namespace enco {
 	enum RenderingBuffer : uint8 {
@@ -18,8 +17,10 @@ namespace enco {
 		IRenderer() {  }
 		virtual ~IRenderer() {  }
 
-		virtual void setClearColor(const Color3f &clearColor) = 0;
-		virtual void setClearDepth(float64 clearDepth) = 0;
+		inline void setClearColor(const glm::vec3 &clearColor) { setClearColor(clearColor.r, clearColor.g, clearColor.b); }
+		virtual void setClearColor(f32 r, f32 g, f32 b) = 0;
+
+		virtual void setClearDepth(f64 clearDepth) = 0;
 
 		virtual void clearBuffer(int buffers) = 0;
 	};
