@@ -11,7 +11,8 @@
 namespace enco {
 	class DesktopView : public IView {
 	public:
-		inline DesktopView() : m_window(nullptr), m_openGLContext(nullptr) {  }
+		inline DesktopView(const glm::u32vec2 &size = glm::u32vec2(320, 240)) : m_window(nullptr), m_openGLContext(nullptr) { m_size = size; }
+		inline DesktopView(u32 width, u32 height) : DesktopView(glm::u32vec2(width, height)) {  }
 
 		ENCODESKTOPAPI virtual void create();
 		ENCODESKTOPAPI virtual void destroy();
