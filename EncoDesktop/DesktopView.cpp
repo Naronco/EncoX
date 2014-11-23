@@ -4,7 +4,7 @@
 namespace enco {
 	ENCODESKTOPAPI void DesktopView::create(IRenderer *renderer) {
 		m_renderer = renderer;
-		
+
 		SDL_Init(SDL_INIT_VIDEO);
 
 		m_window = SDL_CreateWindow(m_name.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, (int)m_size.x, (int)m_size.y, SDL_WINDOW_SHOWN | renderer->getSDLOptions());
@@ -19,7 +19,7 @@ namespace enco {
 	ENCODESKTOPAPI void DesktopView::destroy() {
 		/*if (m_openGLContext) {
 			m_openGLContext.reset();
-		}*/
+			}*/
 
 		m_renderer->deleteContext();
 
@@ -46,7 +46,7 @@ namespace enco {
 	/*ENCODESKTOPAPI void DesktopView::createOpenGLContext(const OpenGLContextParameters &parameters) {
 		m_openGLContext = std::shared_ptr<DesktopOpenGLContext>(new DesktopOpenGLContext(m_window, parameters));
 		m_openGLContext->makeCurrent();
-	}*/
+		}*/
 
 	ENCODESKTOPAPI void DesktopView::onResize() {
 		SDL_SetWindowSize(m_window, (int)m_size.x, (int)m_size.y);
