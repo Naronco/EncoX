@@ -36,3 +36,4 @@ Debug/
 Release/
 EncoX/*.cpp
 EncoX/*.h
+!framework/bin
