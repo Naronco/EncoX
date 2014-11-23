@@ -33,6 +33,9 @@ namespace enco {
 		virtual void setClearDepth(f64 clearDepth) = 0;
 
 		virtual void clearBuffer(int buffers) = 0;
+
+		virtual void createVertexBuffer() = 0;
+		virtual void deleteVertexBuffer() = 0;
 	};
 }
 
