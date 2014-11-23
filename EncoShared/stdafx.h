@@ -17,6 +17,8 @@
 #	define ENCOSHAREDAPI
 #endif
 
+#include <codecvt>
+
 namespace enco {
 	typedef char int8, i8;
 	typedef short int16, i16;
@@ -30,4 +32,6 @@ namespace enco {
 
 	typedef float f32, float32;
 	typedef double f64, float64;
+	
+	ENCOSHAREDAPI extern std::wstring_convert<std::codecvt_utf8<wchar_t>> g_utf8conv;
 }

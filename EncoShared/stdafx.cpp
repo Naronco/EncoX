@@ -1,8 +1,3 @@
-// stdafx.cpp : Quelldatei, die nur die Standard-Includes einbindet.
-// EncoShared.pch ist der vorkompilierte Header.
-// stdafx.obj enthält die vorkompilierten Typinformationen.
-
 #include "stdafx.h"
 
-// TODO: Auf zusätzliche Header verweisen, die in STDAFX.H
-// und nicht in dieser Datei erforderlich sind.
+ENCOSHAREDAPI std::wstring_convert<std::codecvt_utf8<wchar_t>> enco::g_utf8conv;
