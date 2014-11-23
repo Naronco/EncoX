@@ -4,16 +4,14 @@
 #pragma once
 
 #include "stdafx.h"
-#include "IOpenGLContext.h"
+#include "IRenderer.h"
 
 #include <memory>
 #include <string>
+#include <map>
 
 namespace enco {
-	class IView;
-	struct OpenGLContextParameters;
-
-	struct OpenGLContextParameters {
+	/*struct OpenGLContextParameters {
 		uint8 redSize, greenSize, blueSize, alphaSize;
 		uint8 doublebufferSize, depthbufferSize, stencilbufferSize;
 		uint8 samples;
@@ -28,7 +26,7 @@ namespace enco {
 			majorVersion = 3;
 			minorVersion = 2;
 		}
-	};
+	};*/
 
 	class IView {
 	protected:
@@ -42,16 +40,10 @@ namespace enco {
 		IView() {  }
 		virtual ~IView() {  }
 
-		virtual void create() = 0;
+		virtual void create(IRenderer *renderer) = 0;
 		virtual void destroy() = 0;
 
 		virtual bool update(float deltaTime) = 0;
-
-		virtual void beginScene() = 0;
-		virtual void endScene() = 0;
-
-		virtual void createOpenGLContext(const OpenGLContextParameters &parameters) = 0;
-		virtual std::shared_ptr<IOpenGLContext> getOpenGLContext() const = 0;
 
 		inline void setSize(const glm::u32vec2 &size) { m_size = size; onResize(); }
 		inline void setName(const std::string &name) { m_name = name; onRename(); }

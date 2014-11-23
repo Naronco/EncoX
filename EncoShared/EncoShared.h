@@ -6,7 +6,6 @@
 #include "stdafx.h"
 
 #include "IView.h"
-#include "IOpenGLContext.h"
 #include "IRenderer.h"
 
 #include "EncoContext.h"

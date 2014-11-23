@@ -6,6 +6,5 @@
 #include "stdafx.h"
 
 #include "DesktopView.h"
-#include "DesktopOpenGLContext.h"
 
 #endif

@@ -9,7 +9,7 @@ namespace enco {
 	}
 
 	ENCOSHAREDAPI void EncoContext::start() {
-		m_mainView->create();
+		m_mainView->create(m_renderer.get());
 	}
 
 	ENCOSHAREDAPI void EncoContext::stop() {

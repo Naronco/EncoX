@@ -30,9 +30,6 @@
     <ClInclude Include="IRenderer.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="IOpenGLContext.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="EncoContext.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
