@@ -48,7 +48,7 @@ namespace enco {
 
 	class IVertexType {
 	public:
-		virtual VertexDeclaration* getVertexDeclaration() = 0;
+		virtual const VertexDeclaration &getVertexDeclaration() = 0;
 	};
 }
 
