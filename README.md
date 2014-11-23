@@ -1,4 +1,4 @@
-Enco3D
-======
+EncoX
+=====
 
-Enco3D is a 3D Engine mainly developed by @NaroncoNexo. It uses modern OpenGL rendering techniques and very good looking Shaders.
+EncoX is a Game Engine developed by @NaroncoNexo and @WebFreak001. It will support both DirectX and OpenGL for all platforms using SDL
