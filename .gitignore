@@ -34,4 +34,5 @@ SuperHot/
 ipch/
 Debug/
 Release/
-EncoX/
+EncoX/*.cpp
+EncoX/*.h
