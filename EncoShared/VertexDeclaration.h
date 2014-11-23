@@ -8,26 +8,10 @@
 #include <vector>
 
 namespace enco {
-	struct VertexElement {
-		VertexElement(i32 offset, VertexElementFormat format, VertexElementUsage usage, i32 usageIndex) : offset(offset), format(format), usage(usage), usageIndex(usageIndex) { }
-
-		i32 offset, usageIndex;
-		VertexElementFormat format;
-		VertexElementUsage usage;
-	};
-
-	class VertexDeclaration {
-	public:
-		VertexDeclaration(std::vector<VertexElement> elems) : m_elements(elems) {}
-		VertexDeclaration() : VertexDeclaration(std::vector<VertexElement>()) {}
-		~VertexDeclaration() { m_elements.clear(); }
-
-		inline void addElement(VertexElement element) { m_elements.push_back(element); }
-		inline std::vector<VertexElement> getElements() { return m_elements; }
-
-	private:
-		std::vector<VertexElement> m_elements;
-	};
+	struct VertexElement;
+	class VertexDeclaration;
+	enum VertexElementFormat;
+	enum VertexElementUsage;
 
 	enum VertexElementFormat {
 		vec1,
@@ -40,6 +24,49 @@ namespace enco {
 		normalizedVec4,
 		/// <summary>Four-component packed int32 (ARGB)</summary>
 		color
+	};
+
+	const int32 g_vertexElementFormatSizes[] = {
+		sizeof(float) * 1, // vec1
+		sizeof(float) * 2, // vec2
+		sizeof(float) * 3, // vec3
+		sizeof(float) * 4, // vec4
+		sizeof(float) * 1, // normalizedVec1
+		sizeof(float) * 2, // normalizedVec2
+		sizeof(float) * 3, // normalizedVec3
+		sizeof(float) * 4, // normalizedVec4
+		sizeof(int32),     // color
+	};
+
+	struct VertexElement {
+		VertexElement(i32 offset, VertexElementFormat format, VertexElementUsage usage, i32 usageIndex) : offset(offset), format(format), usage(usage), usageIndex(usageIndex) { }
+
+		i32 offset, usageIndex;
+		VertexElementFormat format;
+		VertexElementUsage usage;
+	};
+
+	class VertexDeclaration {
+	public:
+		VertexDeclaration(std::vector<VertexElement> elems) : m_elements(elems) { calculateSize(); }
+		VertexDeclaration() : VertexDeclaration(std::vector<VertexElement>()) {  }
+		~VertexDeclaration() { m_elements.clear(); }
+
+		inline void addElement(VertexElement element) { m_elements.push_back(element); m_size += g_vertexElementFormatSizes[element.format]; }
+		inline std::vector<VertexElement> getElements() { return m_elements; }
+
+		inline int32 getSize() const { return m_size; }
+
+	private:
+		std::vector<VertexElement> m_elements;
+		mutable int32 m_size;
+
+		inline void calculateSize() {
+			m_size = 0;
+			for (auto element : m_elements) {
+				m_size += g_vertexElementFormatSizes[element.format];
+			}
+		}
 	};
 
 	enum VertexElementUsage {
