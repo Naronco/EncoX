@@ -10,6 +10,15 @@
 		8F6804621A23876D0080CA3A /* EncoShared.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8F6804611A23876D0080CA3A /* EncoShared.h */; };
 		8F6804641A23876D0080CA3A /* EncoShared.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6804631A23876D0080CA3A /* EncoShared.m */; };
 		8F68046A1A23876D0080CA3A /* libEncoShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F68045E1A23876D0080CA3A /* libEncoShared.a */; };
+		8F68047C1A2389E90080CA3A /* dllmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F68047B1A2389E90080CA3A /* dllmain.cpp */; };
+		8F68047E1A2389F50080CA3A /* EncoContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F68047D1A2389F50080CA3A /* EncoContext.cpp */; };
+		8F6804821A238A030080CA3A /* stdafx.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F6804811A238A030080CA3A /* stdafx.cpp */; };
+		8F6804841A238A0B0080CA3A /* EncoContext.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8F6804831A238A0B0080CA3A /* EncoContext.h */; };
+		8F6804881A238A2A0080CA3A /* stdafx.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8F6804871A238A2A0080CA3A /* stdafx.h */; };
+		8F68048A1A238A310080CA3A /* IRenderer.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8F6804891A238A310080CA3A /* IRenderer.h */; };
+		8F68048C1A238A360080CA3A /* IView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8F68048B1A238A360080CA3A /* IView.h */; };
+		8F68048E1A238A3B0080CA3A /* targetver.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8F68048D1A238A3B0080CA3A /* targetver.h */; };
+		8F6804901A238A400080CA3A /* VertexDeclaration.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8F68048F1A238A400080CA3A /* VertexDeclaration.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +38,13 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				8F68048E1A238A3B0080CA3A /* targetver.h in CopyFiles */,
+				8F6804901A238A400080CA3A /* VertexDeclaration.h in CopyFiles */,
 				8F6804621A23876D0080CA3A /* EncoShared.h in CopyFiles */,
+				8F6804841A238A0B0080CA3A /* EncoContext.h in CopyFiles */,
+				8F68048A1A238A310080CA3A /* IRenderer.h in CopyFiles */,
+				8F68048C1A238A360080CA3A /* IView.h in CopyFiles */,
+				8F6804881A238A2A0080CA3A /* stdafx.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +56,18 @@
 		8F6804631A23876D0080CA3A /* EncoShared.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncoShared.m; sourceTree = "<group>"; };
 		8F6804691A23876D0080CA3A /* EncoSharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EncoSharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F68046F1A23876D0080CA3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F6804781A23879B0080CA3A /* EncoShared */ = {isa = PBXFileReference; lastKnownFileType = folder; name = EncoShared; path = ../../../EncoShared; sourceTree = "<group>"; };
+		8F68047B1A2389E90080CA3A /* dllmain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = dllmain.cpp; path = ../../EncoShared/dllmain.cpp; sourceTree = "<group>"; };
+		8F68047D1A2389F50080CA3A /* EncoContext.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = EncoContext.cpp; path = ../../EncoShared/EncoContext.cpp; sourceTree = "<group>"; };
+		8F68047F1A2389FB0080CA3A /* EncoShared.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = EncoShared.cpp; path = ../../EncoShared/EncoShared.cpp; sourceTree = "<group>"; };
+		8F6804811A238A030080CA3A /* stdafx.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = stdafx.cpp; path = ../../EncoShared/stdafx.cpp; sourceTree = "<group>"; };
+		8F6804831A238A0B0080CA3A /* EncoContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EncoContext.h; path = ../../EncoShared/EncoContext.h; sourceTree = "<group>"; };
+		8F6804851A238A240080CA3A /* stdafx.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = stdafx.cpp; path = ../../EncoShared/stdafx.cpp; sourceTree = "<group>"; };
+		8F6804871A238A2A0080CA3A /* stdafx.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; name = stdafx.h; path = ../../EncoShared/stdafx.h; sourceTree = "<group>"; };
+		8F6804891A238A310080CA3A /* IRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IRenderer.h; path = ../../EncoShared/IRenderer.h; sourceTree = "<group>"; };
+		8F68048B1A238A360080CA3A /* IView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IView.h; path = ../../EncoShared/IView.h; sourceTree = "<group>"; };
+		8F68048D1A238A3B0080CA3A /* targetver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = targetver.h; path = ../../EncoShared/targetver.h; sourceTree = "<group>"; };
+		8F68048F1A238A400080CA3A /* VertexDeclaration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VertexDeclaration.h; path = ../../EncoShared/VertexDeclaration.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +92,17 @@
 		8F6804551A23876D0080CA3A = {
 			isa = PBXGroup;
 			children = (
+				8F68048F1A238A400080CA3A /* VertexDeclaration.h */,
+				8F68048D1A238A3B0080CA3A /* targetver.h */,
+				8F68048B1A238A360080CA3A /* IView.h */,
+				8F6804891A238A310080CA3A /* IRenderer.h */,
+				8F6804871A238A2A0080CA3A /* stdafx.h */,
+				8F6804851A238A240080CA3A /* stdafx.cpp */,
+				8F6804831A238A0B0080CA3A /* EncoContext.h */,
+				8F6804811A238A030080CA3A /* stdafx.cpp */,
+				8F68047F1A2389FB0080CA3A /* EncoShared.cpp */,
+				8F68047D1A2389F50080CA3A /* EncoContext.cpp */,
+				8F68047B1A2389E90080CA3A /* dllmain.cpp */,
 				8F6804601A23876D0080CA3A /* EncoShared */,
 				8F68046D1A23876D0080CA3A /* EncoSharedTests */,
 				8F68045F1A23876D0080CA3A /* Products */,
@@ -83,6 +121,7 @@
 		8F6804601A23876D0080CA3A /* EncoShared */ = {
 			isa = PBXGroup;
 			children = (
+				8F6804781A23879B0080CA3A /* EncoShared */,
 				8F6804611A23876D0080CA3A /* EncoShared.h */,
 				8F6804631A23876D0080CA3A /* EncoShared.m */,
 			);
@@ -194,6 +233,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F6804641A23876D0080CA3A /* EncoShared.m in Sources */,
+				8F68047C1A2389E90080CA3A /* dllmain.cpp in Sources */,
+				8F68047E1A2389F50080CA3A /* EncoContext.cpp in Sources */,
+				8F6804821A238A030080CA3A /* stdafx.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +334,7 @@
 		8F6804731A23876D0080CA3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -301,6 +344,7 @@
 		8F6804741A23876D0080CA3A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
