@@ -33,5 +33,5 @@ namespace enco {
 	typedef float f32, float32;
 	typedef double f64, float64;
 	
-	ENCOSHAREDAPI extern std::wstring_convert<std::codecvt_utf8<wchar_t>> g_utf8conv;
+	ENCOSHAREDAPI extern std::string wstrToStr(const std::wstring &str);
 }
