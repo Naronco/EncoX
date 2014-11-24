@@ -4,6 +4,7 @@
 #pragma once
 
 #include "stdafx.h"
+#include "VertexDeclaration.h"
 
 namespace enco {
 	typedef void *SDL_WINDOW;
@@ -34,8 +35,9 @@ namespace enco {
 
 		virtual void clearBuffer(int buffers) = 0;
 
-		virtual void createVertexBuffer() = 0;
-		virtual void deleteVertexBuffer() = 0;
+		virtual int32 createVertexBuffer(const void *vertexData, const VertexDeclaration &vertexDeclaration, u32 vertexCount) = 0;
+		virtual void renderVertexBuffer(int32 vertexBuffer) = 0;
+		virtual void deleteVertexBuffer(int32 vertexBuffer) = 0;
 	};
 }
 

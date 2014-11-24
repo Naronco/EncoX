@@ -5,6 +5,8 @@
 #ifdef _WIN32
 #	pragma comment (lib, "SDL2.lib")
 #	include <glew/glew.h>
+#	pragma comment (lib, "glew32.lib")
+#	pragma comment (lib, "opengl32.lib")
 #endif
 
 namespace enco {
@@ -12,16 +14,32 @@ namespace enco {
 		if (sdlWindow) {
 			m_sdlWindow = sdlWindow;
 
+			SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, (int)depthBits);
+			SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE, (int)stencilBits);
+
+			SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE);
+			SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
+			SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
+
 			m_sdlGlContext = SDL_GL_CreateContext((SDL_Window *)m_sdlWindow);
 			if (!m_sdlGlContext) {
 #ifdef _DEBUG
 				const char *error = SDL_GetError();
 				if (*error != '\0') {
-					printf("SDL Error: %s\n", error);
+					fprintf(stderr, "SDL Error: %s\n", error);
 					SDL_ClearError();
 				}
 #endif
 			}
+
+			GLenum glewErr = glewInit();
+			if (glewErr != GLEW_OK) {
+#ifdef _DEBUG
+				fprintf(stderr, "GLEW Error: %s\n", glewGetErrorString(glewErr));
+#endif
+			}
+
+			fprintf(stdout, "Using GLEW %s\n", glewGetString(GLEW_VERSION));
 		}
 	}
 
@@ -63,5 +81,47 @@ namespace enco {
 		if ((buffers & RenderingBuffer::stencilBuffer) == RenderingBuffer::stencilBuffer) {
 			glClear(GL_STENCIL_BUFFER_BIT);
 		}
+	}
+
+	ENCOOPENGLAPI int32 OpenGLRenderer::createVertexBuffer(const void *vertexData, const VertexDeclaration &vertexDeclaration, u32 vertexCount) {
+		GLuint vertexBufferID;
+		glGenBuffers(1, &vertexBufferID);
+
+		glBindBuffer(GL_ARRAY_BUFFER, vertexBufferID);
+		glBufferData(GL_ARRAY_BUFFER, vertexDeclaration.getSize(), vertexData, GL_STATIC_DRAW);
+
+		m_vertexBuffers[vertexBufferID] = { vertexDeclaration, vertexCount };
+
+		return (int32)vertexBufferID;
+	}
+
+	const GLenum g_vertexElementFormatTypes[] = {
+		GL_FLOAT, GL_FLOAT, GL_FLOAT, GL_FLOAT, GL_FLOAT, GL_FLOAT, GL_FLOAT, GL_FLOAT, GL_INT
+	};
+
+	const GLenum g_vertexElementFormatGLSizes[] = {
+		1, 2, 3, 4, 1, 2, 3, 4, 1
+	};
+
+	ENCOOPENGLAPI void OpenGLRenderer::renderVertexBuffer(int32 vertexBuffer) {
+		glBindBuffer(GL_ARRAY_BUFFER, (GLuint)vertexBuffer);
+		
+		auto vertexDecl = m_vertexBuffers[(u32)vertexBuffer].vertexDecl;
+		for (auto element : vertexDecl.getElements()) {
+			glEnableVertexAttribArray(element.usage);
+			glVertexAttribPointer(element.usage, g_vertexElementFormatGLSizes[element.format], g_vertexElementFormatTypes[element.format], GL_FALSE, vertexDecl.getSize(), (uchar *)nullptr + element.offset);
+		}
+
+		glDrawArrays(GL_TRIANGLES, 0, m_vertexBuffers[(u32)vertexBuffer].vertexCount);
+
+		for (auto element : vertexDecl.getElements()) {
+			glDisableVertexAttribArray(element.usage);
+		}
+	}
+
+	ENCOOPENGLAPI void OpenGLRenderer::deleteVertexBuffer(int32 vertexBuffer) {
+		GLuint vertexBufferID = (GLuint)vertexBuffer;
+		m_vertexBuffers.erase(m_vertexBuffers.find(vertexBufferID));
+		glDeleteBuffers(1, &vertexBufferID);
 	}
 }
