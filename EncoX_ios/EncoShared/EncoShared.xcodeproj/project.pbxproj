@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F6804621A23876D0080CA3A /* EncoShared.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8F6804611A23876D0080CA3A /* EncoShared.h */; };
+		8F6804641A23876D0080CA3A /* EncoShared.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6804631A23876D0080CA3A /* EncoShared.m */; };
+		8F68046A1A23876D0080CA3A /* libEncoShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F68045E1A23876D0080CA3A /* libEncoShared.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F68046B1A23876D0080CA3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F6804561A23876D0080CA3A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F68045D1A23876D0080CA3A;
+			remoteInfo = EncoShared;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8F68045C1A23876D0080CA3A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				8F6804621A23876D0080CA3A /* EncoShared.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8F68045E1A23876D0080CA3A /* libEncoShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEncoShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F6804611A23876D0080CA3A /* EncoShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncoShared.h; sourceTree = "<group>"; };
+		8F6804631A23876D0080CA3A /* EncoShared.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncoShared.m; sourceTree = "<group>"; };
+		8F6804691A23876D0080CA3A /* EncoSharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EncoSharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F68046F1A23876D0080CA3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F68045B1A23876D0080CA3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F6804661A23876D0080CA3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F68046A1A23876D0080CA3A /* libEncoShared.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F6804551A23876D0080CA3A = {
+			isa = PBXGroup;
+			children = (
+				8F6804601A23876D0080CA3A /* EncoShared */,
+				8F68046D1A23876D0080CA3A /* EncoSharedTests */,
+				8F68045F1A23876D0080CA3A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F68045F1A23876D0080CA3A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F68045E1A23876D0080CA3A /* libEncoShared.a */,
+				8F6804691A23876D0080CA3A /* EncoSharedTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F6804601A23876D0080CA3A /* EncoShared */ = {
+			isa = PBXGroup;
+			children = (
+				8F6804611A23876D0080CA3A /* EncoShared.h */,
+				8F6804631A23876D0080CA3A /* EncoShared.m */,
+			);
+			path = EncoShared;
+			sourceTree = "<group>";
+		};
+		8F68046D1A23876D0080CA3A /* EncoSharedTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F68046E1A23876D0080CA3A /* Supporting Files */,
+			);
+			path = EncoSharedTests;
+			sourceTree = "<group>";
+		};
+		8F68046E1A23876D0080CA3A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F68046F1A23876D0080CA3A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F68045D1A23876D0080CA3A /* EncoShared */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F6804721A23876D0080CA3A /* Build configuration list for PBXNativeTarget "EncoShared" */;
+			buildPhases = (
+				8F68045A1A23876D0080CA3A /* Sources */,
+				8F68045B1A23876D0080CA3A /* Frameworks */,
+				8F68045C1A23876D0080CA3A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EncoShared;
+			productName = EncoShared;
+			productReference = 8F68045E1A23876D0080CA3A /* libEncoShared.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8F6804681A23876D0080CA3A /* EncoSharedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F6804751A23876D0080CA3A /* Build configuration list for PBXNativeTarget "EncoSharedTests" */;
+			buildPhases = (
+				8F6804651A23876D0080CA3A /* Sources */,
+				8F6804661A23876D0080CA3A /* Frameworks */,
+				8F6804671A23876D0080CA3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F68046C1A23876D0080CA3A /* PBXTargetDependency */,
+			);
+			name = EncoSharedTests;
+			productName = EncoSharedTests;
+			productReference = 8F6804691A23876D0080CA3A /* EncoSharedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F6804561A23876D0080CA3A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Naronco;
+				TargetAttributes = {
+					8F68045D1A23876D0080CA3A = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					8F6804681A23876D0080CA3A = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 8F6804591A23876D0080CA3A /* Build configuration list for PBXProject "EncoShared" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8F6804551A23876D0080CA3A;
+			productRefGroup = 8F68045F1A23876D0080CA3A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F68045D1A23876D0080CA3A /* EncoShared */,
+				8F6804681A23876D0080CA3A /* EncoSharedTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F6804671A23876D0080CA3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F68045A1A23876D0080CA3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F6804641A23876D0080CA3A /* EncoShared.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F6804651A23876D0080CA3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F68046C1A23876D0080CA3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F68045D1A23876D0080CA3A /* EncoShared */;
+			targetProxy = 8F68046B1A23876D0080CA3A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8F6804701A23876D0080CA3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8F6804711A23876D0080CA3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F6804731A23876D0080CA3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8F6804741A23876D0080CA3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8F6804761A23876D0080CA3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EncoSharedTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8F6804771A23876D0080CA3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = EncoSharedTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F6804591A23876D0080CA3A /* Build configuration list for PBXProject "EncoShared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F6804701A23876D0080CA3A /* Debug */,
+				8F6804711A23876D0080CA3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F6804721A23876D0080CA3A /* Build configuration list for PBXNativeTarget "EncoShared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F6804731A23876D0080CA3A /* Debug */,
+				8F6804741A23876D0080CA3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8F6804751A23876D0080CA3A /* Build configuration list for PBXNativeTarget "EncoSharedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F6804761A23876D0080CA3A /* Debug */,
+				8F6804771A23876D0080CA3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F6804561A23876D0080CA3A /* Project object */;
+}
