@@ -10,8 +10,10 @@
 namespace enco {
 	struct VertexElement;
 	class VertexDeclaration;
-	enum VertexElementFormat;
-	enum VertexElementUsage;
+    
+    enum VertexElementUsage {
+        position // TODO: textureCoordinate, normal, color, etc.
+    };
 
 	enum VertexElementFormat {
 		vec1,
@@ -67,10 +69,6 @@ namespace enco {
 				m_size += g_vertexElementFormatSizes[element.format];
 			}
 		}
-	};
-
-	enum VertexElementUsage {
-		position // TODO: textureCoordinate, normal, color, etc.
 	};
 
 	class IVertexType {
