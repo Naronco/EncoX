@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F6804621A23876D0080CA3A /* EncoShared.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8F6804611A23876D0080CA3A /* EncoShared.h */; };
-		8F6804641A23876D0080CA3A /* EncoShared.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6804631A23876D0080CA3A /* EncoShared.m */; };
 		8F68046A1A23876D0080CA3A /* libEncoShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F68045E1A23876D0080CA3A /* libEncoShared.a */; };
 		8F68047C1A2389E90080CA3A /* dllmain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F68047B1A2389E90080CA3A /* dllmain.cpp */; };
 		8F68047E1A2389F50080CA3A /* EncoContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F68047D1A2389F50080CA3A /* EncoContext.cpp */; };
@@ -19,6 +17,8 @@
 		8F68048C1A238A360080CA3A /* IView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8F68048B1A238A360080CA3A /* IView.h */; };
 		8F68048E1A238A3B0080CA3A /* targetver.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8F68048D1A238A3B0080CA3A /* targetver.h */; };
 		8F6804901A238A400080CA3A /* VertexDeclaration.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8F68048F1A238A400080CA3A /* VertexDeclaration.h */; };
+		8F6807991A2393370080CA3A /* EncoShared.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8F6807981A2393370080CA3A /* EncoShared.h */; };
+		8F68079B1A23933F0080CA3A /* EncoShared.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F68079A1A23933F0080CA3A /* EncoShared.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,11 +40,11 @@
 			files = (
 				8F68048E1A238A3B0080CA3A /* targetver.h in CopyFiles */,
 				8F6804901A238A400080CA3A /* VertexDeclaration.h in CopyFiles */,
-				8F6804621A23876D0080CA3A /* EncoShared.h in CopyFiles */,
 				8F6804841A238A0B0080CA3A /* EncoContext.h in CopyFiles */,
 				8F68048A1A238A310080CA3A /* IRenderer.h in CopyFiles */,
 				8F68048C1A238A360080CA3A /* IView.h in CopyFiles */,
 				8F6804881A238A2A0080CA3A /* stdafx.h in CopyFiles */,
+				8F6807991A2393370080CA3A /* EncoShared.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +52,6 @@
 
 /* Begin PBXFileReference section */
 		8F68045E1A23876D0080CA3A /* libEncoShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEncoShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F6804611A23876D0080CA3A /* EncoShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncoShared.h; sourceTree = "<group>"; };
-		8F6804631A23876D0080CA3A /* EncoShared.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EncoShared.m; sourceTree = "<group>"; };
 		8F6804691A23876D0080CA3A /* EncoSharedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EncoSharedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F68046F1A23876D0080CA3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F6804781A23879B0080CA3A /* EncoShared */ = {isa = PBXFileReference; lastKnownFileType = folder; name = EncoShared; path = ../../../EncoShared; sourceTree = "<group>"; };
@@ -68,6 +66,8 @@
 		8F68048B1A238A360080CA3A /* IView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IView.h; path = ../../EncoShared/IView.h; sourceTree = "<group>"; };
 		8F68048D1A238A3B0080CA3A /* targetver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = targetver.h; path = ../../EncoShared/targetver.h; sourceTree = "<group>"; };
 		8F68048F1A238A400080CA3A /* VertexDeclaration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VertexDeclaration.h; path = ../../EncoShared/VertexDeclaration.h; sourceTree = "<group>"; };
+		8F6807981A2393370080CA3A /* EncoShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EncoShared.h; path = ../../EncoShared/EncoShared.h; sourceTree = "<group>"; };
+		8F68079A1A23933F0080CA3A /* EncoShared.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = EncoShared.cpp; path = ../../EncoShared/EncoShared.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +92,8 @@
 		8F6804551A23876D0080CA3A = {
 			isa = PBXGroup;
 			children = (
+				8F68079A1A23933F0080CA3A /* EncoShared.cpp */,
+				8F6807981A2393370080CA3A /* EncoShared.h */,
 				8F68048F1A238A400080CA3A /* VertexDeclaration.h */,
 				8F68048D1A238A3B0080CA3A /* targetver.h */,
 				8F68048B1A238A360080CA3A /* IView.h */,
@@ -122,8 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				8F6804781A23879B0080CA3A /* EncoShared */,
-				8F6804611A23876D0080CA3A /* EncoShared.h */,
-				8F6804631A23876D0080CA3A /* EncoShared.m */,
 			);
 			path = EncoShared;
 			sourceTree = "<group>";
@@ -232,10 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F6804641A23876D0080CA3A /* EncoShared.m in Sources */,
 				8F68047C1A2389E90080CA3A /* dllmain.cpp in Sources */,
 				8F68047E1A2389F50080CA3A /* EncoContext.cpp in Sources */,
 				8F6804821A238A030080CA3A /* stdafx.cpp in Sources */,
+				8F68079B1A23933F0080CA3A /* EncoShared.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +335,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../framework/include/,
+				);
+				OTHER_CPLUSPLUSFLAGS = "";
+				"OTHER_CPLUSPLUSFLAGS[arch=*]" = "-I/../../framework/include";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -345,6 +352,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../framework/include/,
+				);
+				OTHER_CPLUSPLUSFLAGS = "";
+				"OTHER_CPLUSPLUSFLAGS[arch=*]" = "-I/../../framework/include";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

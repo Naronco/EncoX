@@ -15,6 +15,8 @@
 #	endif
 #else
 #	define ENCOSHAREDAPI
+
+#   include <glm/glm.hpp>
 #endif
 
 #include <codecvt>
