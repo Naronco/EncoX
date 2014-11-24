@@ -28,6 +28,8 @@ namespace enco {
 		virtual void beginFrame() = 0;
 		virtual void endFrame() = 0;
 
+		virtual void makeCurrent() = 0; // Only relevant for OpenGL
+
 		inline void setClearColor(const glm::vec3 &clearColor) { setClearColor(clearColor.r, clearColor.g, clearColor.b); }
 		virtual void setClearColor(f32 r, f32 g, f32 b) = 0;
 

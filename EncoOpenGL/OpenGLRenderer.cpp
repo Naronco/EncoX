@@ -63,6 +63,12 @@ namespace enco {
 		}
 	}
 
+	ENCOOPENGLAPI void OpenGLRenderer::makeCurrent() {
+		if (m_sdlGlContext) {
+			SDL_GL_MakeCurrent((SDL_Window *)m_sdlWindow, m_sdlGlContext);
+		}
+	}
+
 	ENCOOPENGLAPI void OpenGLRenderer::setClearColor(f32 r, f32 g, f32 b) {
 		glClearColor(r, g, b, 1);
 	}

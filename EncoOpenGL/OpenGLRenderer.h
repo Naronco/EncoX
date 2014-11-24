@@ -28,6 +28,8 @@ namespace enco {
 		ENCOOPENGLAPI virtual void beginFrame();
 		ENCOOPENGLAPI virtual void endFrame();
 
+		ENCOOPENGLAPI virtual void makeCurrent();
+
 		ENCOOPENGLAPI virtual void setClearColor(f32 r, f32 g, f32 b);
 		ENCOOPENGLAPI virtual void setClearDepth(f64 clearDepth);
 
