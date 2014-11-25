@@ -6,4 +6,4 @@ EncoX is a Game Engine developed by @NaroncoNexo and @WebFreak001. It will suppo
 
 ## Progress
 
-![A Blue Window](http://i.imgur.com/XlKYHq8.png "A Blue Window")
+![A Blue Window](http://i.imgur.com/M1TSL2a.png "A Blue Window")
