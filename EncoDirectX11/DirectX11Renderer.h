@@ -32,6 +32,9 @@ namespace enco {
 		ENCODIRECTX11API virtual void renderVertexBuffer(int32 vertexBuffer);
 		ENCODIRECTX11API virtual void deleteVertexBuffer(int32 vertexBuffer);
 
+		ENCODIRECTX11API inline int getFeatureLevel() { return m_featureLevel; }
+		ENCODIRECTX11API inline int getDriverType() { return m_driverType; }
+
 	private:
 		ID3D11Device* m_device;
 		ID3D11DeviceContext* m_immediateContext;

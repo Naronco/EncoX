@@ -49,7 +49,7 @@ namespace enco {
 			}
 			if (FAILED(hr))
 			{
-				fprintf(stdout, "Failed to initialize DirectX11 device");
+				fprintf(stdout, "Failed to initialize DirectX11 device\n");
 				deleteContext();
 				return;
 			}
@@ -73,7 +73,7 @@ namespace enco {
 			}
 			if (FAILED(hr))
 			{
-				fprintf(stdout, "Failed to initialize DirectX11 factory");
+				fprintf(stdout, "Failed to initialize DirectX11 factory\n");
 				deleteContext();
 				return;
 			}
@@ -98,7 +98,7 @@ namespace enco {
 
 			if (FAILED(hr))
 			{
-				fprintf(stdout, "Failed to initialize DirectX11 swap chain");
+				fprintf(stdout, "Failed to initialize DirectX11 swap chain\n");
 				deleteContext();
 				return;
 			}
@@ -108,7 +108,7 @@ namespace enco {
 			hr = m_swapChain->GetBuffer(0, __uuidof(ID3D11Texture2D), reinterpret_cast<void**>(&pBackBuffer));
 			if (FAILED(hr))
 			{
-				fprintf(stdout, "Failed to get DirectX11 back buffer");
+				fprintf(stdout, "Failed to get DirectX11 back buffer\n");
 				deleteContext();
 				return;
 			}
@@ -117,7 +117,7 @@ namespace enco {
 			pBackBuffer->Release();
 			if (FAILED(hr))
 			{
-				fprintf(stdout, "Failed to initialize DirectX11 render target view");
+				fprintf(stdout, "Failed to initialize DirectX11 render target view\n");
 				deleteContext();
 				return;
 			}
@@ -134,7 +134,7 @@ namespace enco {
 			vp.TopLeftY = 0;
 			m_immediateContext->RSSetViewports(1, &vp);
 
-			fprintf(stdout, "Initialized DirectX11 renderer");
+			fprintf(stdout, "Initialized DirectX11 renderer\n");
 		}
 	}
 
@@ -157,7 +157,7 @@ namespace enco {
 	}
 
 	ENCODIRECTX11API void DirectX11Renderer::endFrame() {
-		if (m_device) {
+		if (m_swapChain) {
 			m_swapChain->Present(0, 0);
 		}
 	}
@@ -173,12 +173,15 @@ namespace enco {
 	}
 
 	ENCODIRECTX11API void DirectX11Renderer::clearBuffer(int buffers) {
-		if ((buffers & RenderingBuffer::colorBuffer) == RenderingBuffer::colorBuffer) {
-			m_immediateContext->ClearRenderTargetView(m_renderTargetView, m_clearColor);
-		}
-		if ((buffers & RenderingBuffer::depthBuffer) == RenderingBuffer::depthBuffer || (buffers & RenderingBuffer::stencilBuffer) == RenderingBuffer::stencilBuffer) {
-			// m_immediateContext->ClearDepthStencilView(NULL, (D3D11_CLEAR_DEPTH * (buffers & RenderingBuffer::depthBuffer) == RenderingBuffer::depthBuffer) | (D3D11_CLEAR_STENCIL * (buffers & RenderingBuffer::stencilBuffer) == RenderingBuffer::stencilBuffer), m_clearDepth, 0);
-			// TODO: Add Depth/Stencil buffer
+		if (m_immediateContext)
+		{
+			if ((buffers & RenderingBuffer::colorBuffer) == RenderingBuffer::colorBuffer) {
+				m_immediateContext->ClearRenderTargetView(m_renderTargetView, m_clearColor);
+			}
+			if ((buffers & RenderingBuffer::depthBuffer) == RenderingBuffer::depthBuffer || (buffers & RenderingBuffer::stencilBuffer) == RenderingBuffer::stencilBuffer) {
+				// m_immediateContext->ClearDepthStencilView(NULL, (D3D11_CLEAR_DEPTH * (buffers & RenderingBuffer::depthBuffer) == RenderingBuffer::depthBuffer) | (D3D11_CLEAR_STENCIL * (buffers & RenderingBuffer::stencilBuffer) == RenderingBuffer::stencilBuffer), m_clearDepth, 0);
+				// TODO: Add Depth/Stencil buffer
+			}
 		}
 	}
 
