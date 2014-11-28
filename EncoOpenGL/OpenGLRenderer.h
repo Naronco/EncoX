@@ -35,9 +35,8 @@ namespace enco {
 
 		ENCOOPENGLAPI virtual void clearBuffer(int buffers);
 
-		ENCOOPENGLAPI virtual int32 createVertexBuffer(const void *vertexData, const VertexDeclaration &vertexDeclaration, u32 vertexCount);
-		ENCOOPENGLAPI virtual void renderVertexBuffer(int32 vertexBuffer);
-		ENCOOPENGLAPI virtual void deleteVertexBuffer(int32 vertexBuffer);
+		ENCOOPENGLAPI virtual RenderableMesh createMesh(Mesh* mesh);
+		ENCOOPENGLAPI virtual void deleteMesh(RenderableMesh id);
 
 	private:
 		SDL_WINDOW m_sdlWindow;

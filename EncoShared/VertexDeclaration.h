@@ -10,10 +10,10 @@
 namespace enco {
 	struct VertexElement;
 	class VertexDeclaration;
-    
-    enum VertexElementUsage {
-        position // TODO: textureCoordinate, normal, color, etc.
-    };
+
+	enum VertexElementUsage {
+		position // TODO: textureCoordinate, normal, color, etc.
+	};
 
 	enum VertexElementFormat {
 		vec1,
@@ -54,7 +54,7 @@ namespace enco {
 		VertexDeclaration() : VertexDeclaration(std::vector<VertexElement>()) {  }
 		~VertexDeclaration() { m_elements.clear(); }
 
-		inline void addElement(VertexElement element) { m_elements.push_back(element); m_size += g_vertexElementFormatSizes[element.format]; }
+		inline void addElement(const VertexElement &element) { m_elements.push_back(element); m_size += g_vertexElementFormatSizes[element.format]; }
 		inline std::vector<VertexElement> getElements() { return m_elements; }
 
 		inline int32 getSize() const { return m_size; }

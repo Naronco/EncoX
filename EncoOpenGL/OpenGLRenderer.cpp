@@ -89,7 +89,16 @@ namespace enco {
 		}
 	}
 
-	ENCOOPENGLAPI int32 OpenGLRenderer::createVertexBuffer(const void *vertexData, const VertexDeclaration &vertexDeclaration, u32 vertexCount) {
+	ENCOOPENGLAPI RenderableMesh createMesh(Mesh* mesh)
+	{
+		return 0;
+	}
+
+	ENCOOPENGLAPI void deleteMesh(RenderableMesh id)
+	{
+	}
+
+	/*ENCOOPENGLAPI int32 OpenGLRenderer::createVertexBuffer(const void *vertexData, const VertexDeclaration &vertexDeclaration, u32 vertexCount) {
 		GLuint vertexBufferID;
 		glGenBuffers(1, &vertexBufferID);
 
@@ -99,7 +108,29 @@ namespace enco {
 		m_vertexBuffers[vertexBufferID] = { vertexDeclaration, vertexCount };
 
 		return (int32)vertexBufferID;
-	}
+		}
+
+		ENCOOPENGLAPI void OpenGLRenderer::renderVertexBuffer(int32 vertexBuffer) {
+		glBindBuffer(GL_ARRAY_BUFFER, (GLuint)vertexBuffer);
+
+		auto vertexDecl = m_vertexBuffers[(u32)vertexBuffer].vertexDecl;
+		for (auto element : vertexDecl.getElements()) {
+		glEnableVertexAttribArray(element.usage);
+		glVertexAttribPointer(element.usage, g_vertexElementFormatGLSizes[element.format], g_vertexElementFormatTypes[element.format], GL_FALSE, vertexDecl.getSize(), (uchar *)nullptr + element.offset);
+		}
+
+		glDrawArrays(GL_TRIANGLES, 0, m_vertexBuffers[(u32)vertexBuffer].vertexCount);
+
+		for (auto element : vertexDecl.getElements()) {
+		glDisableVertexAttribArray(element.usage);
+		}
+		}
+
+		ENCOOPENGLAPI void OpenGLRenderer::deleteVertexBuffer(int32 vertexBuffer) {
+		GLuint vertexBufferID = (GLuint)vertexBuffer;
+		m_vertexBuffers.erase(m_vertexBuffers.find(vertexBufferID));
+		glDeleteBuffers(1, &vertexBufferID);
+		}*/
 
 	const GLenum g_vertexElementFormatTypes[] = {
 		GL_FLOAT, GL_FLOAT, GL_FLOAT, GL_FLOAT, GL_FLOAT, GL_FLOAT, GL_FLOAT, GL_FLOAT, GL_INT
@@ -108,26 +139,4 @@ namespace enco {
 	const GLenum g_vertexElementFormatGLSizes[] = {
 		1, 2, 3, 4, 1, 2, 3, 4, 1
 	};
-
-	ENCOOPENGLAPI void OpenGLRenderer::renderVertexBuffer(int32 vertexBuffer) {
-		glBindBuffer(GL_ARRAY_BUFFER, (GLuint)vertexBuffer);
-		
-		auto vertexDecl = m_vertexBuffers[(u32)vertexBuffer].vertexDecl;
-		for (auto element : vertexDecl.getElements()) {
-			glEnableVertexAttribArray(element.usage);
-			glVertexAttribPointer(element.usage, g_vertexElementFormatGLSizes[element.format], g_vertexElementFormatTypes[element.format], GL_FALSE, vertexDecl.getSize(), (uchar *)nullptr + element.offset);
-		}
-
-		glDrawArrays(GL_TRIANGLES, 0, m_vertexBuffers[(u32)vertexBuffer].vertexCount);
-
-		for (auto element : vertexDecl.getElements()) {
-			glDisableVertexAttribArray(element.usage);
-		}
-	}
-
-	ENCOOPENGLAPI void OpenGLRenderer::deleteVertexBuffer(int32 vertexBuffer) {
-		GLuint vertexBufferID = (GLuint)vertexBuffer;
-		m_vertexBuffers.erase(m_vertexBuffers.find(vertexBufferID));
-		glDeleteBuffers(1, &vertexBufferID);
-	}
 }

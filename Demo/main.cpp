@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
 	std::shared_ptr<DesktopView> view;
 	std::shared_ptr<IRenderer> renderer;
 
-	std::string rendererType = "dx";
+	std::string rendererType = "ogl";
 
 	if (argc > 1)
 	{

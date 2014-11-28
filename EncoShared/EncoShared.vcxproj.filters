@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Headerdateien\3D">
+      <UniqueIdentifier>{26185cda-9191-4a6a-90b6-be08293b0be1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -34,7 +37,10 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="VertexDeclaration.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Headerdateien\3D</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

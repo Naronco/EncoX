@@ -5,13 +5,15 @@
 
 #include "stdafx.h"
 #include "VertexDeclaration.h"
+#include "Mesh.h"
+#include <memory>
 
 namespace enco {
 	typedef void *SDL_WINDOW;
 
 	enum RenderingBuffer : uint8 {
-		colorBuffer   = 1 << 0,
-		depthBuffer   = 1 << 1,
+		colorBuffer = 1 << 0,
+		depthBuffer = 1 << 1,
 		stencilBuffer = 1 << 2,
 	};
 
@@ -35,11 +37,10 @@ namespace enco {
 
 		virtual void setClearDepth(f64 clearDepth) = 0;
 
-		virtual void clearBuffer(int buffers) = 0;
+		virtual RenderableMesh createMesh(Mesh* mesh) = 0;
+		virtual void deleteMesh(RenderableMesh id) = 0;
 
-		virtual int32 createVertexBuffer(const void *vertexData, const VertexDeclaration &vertexDeclaration, u32 vertexCount) = 0;
-		virtual void renderVertexBuffer(int32 vertexBuffer) = 0;
-		virtual void deleteVertexBuffer(int32 vertexBuffer) = 0;
+		virtual void clearBuffer(int buffers) = 0;
 	};
 }
 
