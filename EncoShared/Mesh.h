@@ -4,9 +4,7 @@
 #pragma once
 
 #include "stdafx.h"
-
 #include "VertexDeclaration.h"
-#include "IRenderer.h"
 
 #include <memory>
 
@@ -17,8 +15,6 @@ namespace enco {
 	public:
 		Mesh() { }
 		~Mesh() { }
-
-		inline RenderableMesh create(IRenderer* renderer) { return renderer->createMesh(this); }
 
 		inline void addIndex(u32 index) { m_indices.push_back(index); }
 		inline void addIndices(u32* indices, u32 count) { m_indices.insert(m_indices.end(), &indices[0], &indices[count]); }

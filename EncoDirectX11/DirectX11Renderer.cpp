@@ -185,13 +185,22 @@ namespace enco {
 		}
 	}
 
-	ENCODIRECTX11API int32 DirectX11Renderer::createVertexBuffer(const void *vertexData, const VertexDeclaration &vertexDeclaration, u32 vertexCount) {
+	/*	ENCODIRECTX11API int32 DirectX11Renderer::createVertexBuffer(const void *vertexData, const VertexDeclaration &vertexDeclaration, u32 vertexCount) {
+			return 0;
+			}
+
+			ENCODIRECTX11API void DirectX11Renderer::renderVertexBuffer(int32 vertexBuffer) {
+			}
+
+			ENCODIRECTX11API void DirectX11Renderer::deleteVertexBuffer(int32 vertexBuffer) {
+			}*/
+
+	ENCODIRECTX11API RenderableMesh createMesh(Mesh* mesh)
+	{
 		return 0;
 	}
 
-	ENCODIRECTX11API void DirectX11Renderer::renderVertexBuffer(int32 vertexBuffer) {
-	}
-
-	ENCODIRECTX11API void DirectX11Renderer::deleteVertexBuffer(int32 vertexBuffer) {
+	ENCODIRECTX11API void deleteMesh(RenderableMesh id)
+	{
 	}
 }
